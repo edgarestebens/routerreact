@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Router, IndexRoute, Route, browserHistory} from 'react-router';
+import { Router, IndexRoute, Route, Link, browserHistory} from 'react-router';
 import './App.css';
 
 
@@ -10,6 +10,10 @@ const Template =(props) => {
   return(
       <div>
         <h1>Mi super aplicación</h1>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="about">About</Link></li>
+          </ul>
           {props.children}
       </div>       
     )
