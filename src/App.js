@@ -6,6 +6,7 @@ import './App.css';
 const Home = () => <h2>Home</h2>;
 const About = () => <h2>About</h2>;
 const NoMatch = () => <h1>Página no encontrada</h1>;
+const Message = (props) => <h1>Mensaje{props.params.id}</h1>;
 
 const Template =(props) => {
   return(
@@ -28,6 +29,7 @@ class App extends Component {
           <IndexRoute component={Home} />
           <Route path="about"component={About} />
         </Route>
+        <Route path="messages/:id" component={Message} />
         <Route path="*" component={NoMatch} />
       </Router>
     );
